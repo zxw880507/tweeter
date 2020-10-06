@@ -1,0 +1,41 @@
+.new-tweet {
+    text-align: center;
+}
+
+.new-tweet form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-tweet label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+}
+
+.new-tweet #tweet-text {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid #545149;
+    resize: none;
+    background-color: transparent;
+}
+
+.new-tweet #tweet-text:focus {
+    outline: none;
+}
+
+.new-tweet form div {
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Bungee', cursive;
+}
+
+.new-tweet form div button {
+    color: #ffffff;
+    background-color: #4155a2;
+}
