@@ -1,0 +1,50 @@
+/* nav layout */
+
+nav {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    background-color: #4056A1;
+}
+
+nav span {
+    margin: 1.5em;
+}
+
+nav span:first-child {
+    align-self: flex-end;
+    text-transform: uppercase;
+    font-family: 'Bungee', cursive;
+}
+
+nav span:nth-child(2) {
+    position: relative;
+}
+
+
+/* add down-arrow below "white new tweet" */
+
+nav span:nth-child(2)::before,
+nav span:nth-child(2)::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    border: solid #d89721;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    transform: rotate(45deg) translateX(-50%);
+}
+
+
+/* define the two arrows' vertical position */
+
+nav span:nth-child(2)::before {
+    bottom: -50%;
+}
+
+nav span:nth-child(2)::after {
+    bottom: -75%;
+}
