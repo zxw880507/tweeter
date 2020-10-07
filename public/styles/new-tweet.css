@@ -1,3 +1,5 @@
+/* new tweet section */
+
 .new-tweet {
     text-align: center;
 }
@@ -38,4 +40,82 @@
 .new-tweet form div button {
     color: #ffffff;
     background-color: #4155a2;
+}
+
+
+/* .red css for character counter JS */
+
+.new-tweet form div .red {
+    color: red;
+}
+
+
+/* tweets post section */
+
+section#tweet-post {
+    margin-top: 3em;
+}
+
+#tweet-post .article-content {
+    margin: 1em;
+}
+
+#tweet-post article {
+    border: 3px solid #545149;
+    margin-bottom: 1em;
+}
+
+#tweet-post article header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tweet-post article header div {
+    display: flex;
+    align-items: center;
+    padding-left: 0.5em;
+}
+
+#tweet-post article header i {
+    display: none;
+    padding-right: 0.5em;
+}
+
+#tweet-post article header div img {
+    width: 3em;
+    margin-right: 0.6em;
+}
+
+#tweet-post article footer {
+    margin: 0 0.6em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tweet-post article footer span {
+    margin-top: 0.5em;
+}
+
+#tweet-post article footer div {
+    align-self: flex-start;
+}
+
+#tweet-post article p {
+    margin-top: 2em;
+    margin-bottom: 0;
+    padding: 0 0 1.5em 1em;
+    border-bottom: 3px solid #545149;
+}
+
+
+/* tweet article hover effect */
+
+#tweet-post .box-hover {
+    box-shadow: 0.5em 0.5em 1em #19191aa2;
+}
+
+#tweet-post .text-hover {
+    text-shadow: 1px 1px 1px #1b1b1bbb;
 }
