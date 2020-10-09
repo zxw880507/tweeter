@@ -32,6 +32,6 @@ This repository is the starter code for the project: Students will fork and clon
 - [x] Tweet compose area toggles by clicking top button, textarea will be on focus when compose area appears
 - [x] Downside arrow motion
 - [x] Error message slide down by over input limits or tweeting empty content
-- [x] Bottom button pop out by CSS3 keyframe animation when page scrolling up to centain position
+- [x] Bottom button pop out by CSS3 keyframe animation when page scrolling up to certain position
 - [x] Top button will disappear as long as bottom button showing up
 - [x] Automatically Scrolling up to top with duration when clicking the bottom button
