@@ -3,12 +3,16 @@
 
 <head>
     <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <!-- External Font -->
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- icomoon Font -->
+    <link rel="stylesheet" href="./styles/icomoon.css">
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <!-- nav CSS -->
@@ -19,8 +23,6 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- helper function JS -->
-    <script src="./scripts/helper-function.js"></script>
     <!-- character counter over tweets -->
     <script src="./scripts/composer-char-counter.js"></script>
     <!-- new tweet post JS -->
@@ -33,22 +35,23 @@
     <!-- Top nav bar (fixed) -->
     <nav>
         <span>tweeter</span>
-        <span><strong>Write</strong> a new tweet</span>
+        <span><strong>Write</strong> a new tweet<i id="arrow"></i></span>
     </nav>
+    <div id="clear-float"></div>
     <!-- tweeter header -->
     <header id="body-header">
         <div>
-            <img src="/images/profile-hex.png">
+            <img src="./images/trump.png">
         </div>
         <br>
         <div>
-            <h2>Your Name</h2>
+            <h2>Calvin Zheng</h2>
         </div>
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
         <section class="new-tweet">
-            <h2>Compose Tweet</h2>
+            <h3 class="err-message icon-warning"></h3>
             <form action="/tweets" method="POST">
                 <label for="tweet-text">What are you humming about?</label>
                 <textarea name="text" id="tweet-text" rows="2"></textarea>
@@ -59,6 +62,7 @@
             </form>
         </section>
         <section id="tweet-post"></section>
+        <div class="bottom-nav"></div>
     </main>
 </body>
 
