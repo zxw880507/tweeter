@@ -1,13 +1,14 @@
 /* header layout */
 
 #body-header {
+    box-sizing: content-box;
     height: 400px;
-    margin-top: 120px;
-    padding-top: 5px;
+    margin-bottom: 2em;
+    padding-top: 125px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background: url(../images/asfalt-light.png) no-repeat center;
+    background: url(../images/asfalt-light.png);
     background-color: #d89721;
 }
