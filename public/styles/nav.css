@@ -1,4 +1,14 @@
-/* nav layout */
+nav span:nth-child(2) i::after,
+nav span:nth-child(2) i::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 25%;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    transform: rotate(45deg) translateX(-50%);
+}
 
 nav {
     position: fixed;
@@ -10,7 +20,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     color: #ffffff;
-    background-color: #4056A1;
+    min-width: 768px;
 }
 
 nav span {
@@ -18,37 +28,34 @@ nav span {
 }
 
 nav span:first-child {
-    align-self: flex-end;
+    align-self: flex-start;
     text-transform: uppercase;
-    font-family: 'Bungee', cursive;
+    margin: 1.5em 0 0 1.5em;
+    font-family: "Bungee", cursive;
+    font-size: 1.5em;
 }
 
 nav span:nth-child(2) {
     position: relative;
+    cursor: pointer;
 }
 
-
-/* add down-arrow below "white new tweet" */
-
-nav span:nth-child(2)::before,
-nav span:nth-child(2)::after {
-    display: block;
-    content: "";
+nav span:nth-child(2) i {
+    width: 1em;
+    height: 1em;
     position: absolute;
+    top: 75%;
     left: 50%;
-    border: solid #d89721;
-    border-width: 0 2px 2px 0;
-    padding: 4px;
-    transform: rotate(45deg) translateX(-50%);
+    transform: translateX(-50%);
+}
+
+nav span:nth-child(2) i::before {
+    top: 50%;
+}
+
+nav span:nth-child(2) i::after {
+    top: 75%;
 }
 
 
-/* define the two arrows' vertical position */
-
-nav span:nth-child(2)::before {
-    bottom: -50%;
-}
-
-nav span:nth-child(2)::after {
-    bottom: -75%;
-}
+/*# sourceMappingURL=nav.css.map */
