@@ -112,8 +112,8 @@ const converTime = function(time) {
     if (init[0] / elem[0] < 1) {
       init[0] = Math.floor(init[0]);
       str = init[0] < 2 ? init.join(' ') + ' ago' : init.join(' ') + 's ago';
-      // if returned value less than 1, meaning unit is second and text should show 'just now'
-      return init[0] < 1 ? 'Just now' : str;
+      // if returned value is second, text should show 'just now'
+      return init[1] === 'second' ? 'Just now' : str;
     }
     init[0] /= elem[0];
     init[1] = elem[1];
