@@ -1,0 +1,171 @@
+%icon-exclamation {
+    font-family: 'icomoon';
+    content: "\ea07";
+    margin: 0 0.5em;
+}
+
+%bottomBtn-arrow {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    border: solid #ffffff;
+    border-width: 0.2em 0 0 0.2em;
+    padding: 0.3em;
+    transform: rotate(45deg) translateX(-80%);
+}
+
+.new-tweet {
+    text-align: center;
+    margin-bottom: 2em;
+    .err-message {
+        display: none;
+        padding: 0.6em 0;
+        border: 0.1em solid #ff1101;
+        color: #ff1101;
+        font-size: 1rem;
+        font-weight: 600;
+        &.icon-warning {
+            &::before {
+                @extend %icon-exclamation;
+            }
+            &::after {
+                @extend %icon-exclamation;
+            }
+        }
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        label {
+            align-self: flex-start;
+            margin-bottom: 5px;
+        }
+        #tweet-text {
+            width: 100%;
+            border: none;
+            border-bottom: 3px solid #545149;
+            resize: none;
+            background-color: transparent;
+            &:focus {
+                outline: none;
+            }
+        }
+        div {
+            width: 100%;
+            margin-top: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Bungee', cursive;
+            .red {
+                color: red;
+            }
+            button {
+                color: #ffffff;
+                background-color: #4155a2;
+            }
+        }
+    }
+}
+
+#tweet-post {
+    margin-top: 1em;
+    article {
+        border: 3px solid #545149;
+        margin-bottom: 1em;
+        &.box-hover {
+            box-shadow: 0.5em 0.5em 1em #19191aa2;
+        }
+        .text-hover {
+            text-shadow: 1px 1px 1px #1b1b1bbb;
+        }
+        .article-content {
+            margin: 1em;
+            header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                div {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 0.5em;
+                    img {
+                        width: 3em;
+                        margin-right: 0.6em;
+                    }
+                }
+                i {
+                    display: none;
+                    padding-right: 0.5em;
+                }
+            }
+            p {
+                margin-top: 2em;
+                margin-bottom: 0;
+                padding: 0 0 1.5em 1em;
+                border-bottom: 3px solid #545149;
+            }
+            footer {
+                margin: 0 0.6em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                span {
+                    margin-top: 0.5em;
+                    padding-left: 1em;
+                    font-size: 0.6em;
+                }
+                div {
+                    align-self: flex-start;
+                    a {
+                        font-family: 'icomoon';
+                        cursor: pointer;
+                        margin: 0.1em;
+                        font-size: 0.6em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bottom-nav {
+    opacity: 0;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    width: 5em;
+    height: 5em;
+    border-radius: 2.5em;
+    background-color: rgba(255, 0, 0, 0.842);
+    &.ani-pop {
+        opacity: 1;
+        cursor: pointer;
+        animation: popbtn 0.5s cubic-bezier(0, .25, .06, 1);
+        animation-fill-mode: backwards;
+        animation-delay: 0.3s;
+    }
+    &::before {
+        @extend %bottomBtn-arrow;
+        top: 50%;
+    }
+    &::after {
+        @extend %bottomBtn-arrow;
+        top: 60%;
+    }
+}
+
+@keyframes popbtn {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
