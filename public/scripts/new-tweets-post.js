@@ -102,7 +102,7 @@ const converTime = function(time) {
   ];
 
   // interval as in seconds
-  const interval = (+new Date() - time) / 1000;
+  const interval = (Date.now() - time) / 1000;
   let init = [interval, 'second'];
   let str;
 
